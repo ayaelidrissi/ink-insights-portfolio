@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Ink & Insights</title>
+      <link rel="icon" type="image/png" href="logo.png">
+    <meta name="description" content="Professional book editing services including developmental editing, copy editing, and proofreading.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Ink & Insights Logo">
+                    <span>Ink & Insights</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="work-with-me.html" class="nav-link">Work With Me</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link cta-nav">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="container">
+                <h1 class="page-title">Services</h1>
+                <p class="page-subtitle">At Ink and Insights Services, I believe in offering flexible, personalized editing and PA services that cater to your specific needs. Whether you’re an author working on your latest manuscript or someone who needs extra assistance with your author brand, I’ve got you covered.</p>
+            </div>
+        </div>
+<main class="services-page">
+    <aside class="services-sidebar">
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#consultation">01. Free Consultation</a></li>
+                <li>
+                    <a href="#editing">02. Editing Services</a>
+                    <ul class="sub-menu">
+                        <li><a href="#manuscript-critique">Manuscript Critique</a></li>
+                        <li><a href="#poetry">Poetry Books</a></li>
+                    </ul>
+                </li>
+                <li><a href="#formatting">03. Book Formatting</a></li>
+                <li><a href="#branding">04. Author Branding</a></li>
+                <li><a href="#content-pulling">05. Content Pulling</a></li>
+                <li><a href="#website-creation">06. Website Creation</a></li>
+                <li><a href="#pa-services">07. PA Services</a></li>
+                <li><a href="#package-deals">08. PA Package Deals</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div class="services-content-wrapper">
+        
+        <section id="consultation" class="service-section">
+            <h2 class="section-num">01</h2>
+            <h1 class="section-title">Free Consultation*</h1>
+            <div class="description-text">
+                <p>Every great book starts with a conversation. During this 30-60 minute session, we dive deep into your manuscript's status, your publishing goals, and your budget. I don’t believe in "one size fits all"—I will create a custom roadmap that ensures you only pay for what your book actually needs to succeed.</p>
+                <p class="disclaimer-box">Prices are flexible and payment plans are available to make high-quality editing accessible for every author.</p>
+            </div>
+        </section>
+
+        <section id="editing" class="service-section">
+            <h2 class="section-num">02</h2>
+            <h1 class="section-title">Editing Services</h1>
+            <div class="description-text">
+                <p>From the first draft to the final polish, I provide high-level editorial support to ensure your story resonates with readers and meets industry standards.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Structural & Developmental</h3>
+                    <p class="price">$0.009<span>/word</span></p>
+                    <p class="card-desc">The "Big Picture" edit. We look at plot holes, character arcs, pacing, and story structure to build a solid foundation.</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Line & Copyediting</h3>
+                    <p class="price">$0.007<span>/word</span></p>
+                    <p class="card-desc">The "Sentence Level" edit. I refine your unique voice, improving flow, clarity, and technical correctness while keeping your tone intact.</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Proofreading</h3>
+                    <p class="price">$0.005<span>/word</span></p>
+                    <p class="card-desc">The "Final Eyes." A meticulous sweep for typos, grammar slips, and punctuation errors before you hit 'publish'.</p>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <h3>Full Editing Package</h3>
+                    <p class="price">$0.02<span>/word</span></p>
+                    <p class="card-desc">Total manuscript care. This comprehensive bundle covers Developmental, Line, and Proofreading at a discounted rate.</p>
+                </div>
+            </div>
+<div class="calculator-box">
+    <h3>Instant Quote & Payment Plan</h3>
+    <p>Calculate your investment and see your flexible payment options.</p>
+    
+    <div class="calc-form">
+        <div class="calc-group">
+            <label for="wordCount">Word Count</label>
+            <input type="number" id="wordCount" placeholder="e.g. 50000" min="0">
+        </div>
+        
+        <div class="calc-group">
+            <label for="editType">Service Type</label>
+            <select id="editType">
+                <option value="0.009">Structural & Developmental ($0.009)</option>
+                <option value="0.007">Line & Copyediting ($0.007)</option>
+                <option value="0.005">Proofreading ($0.005)</option>
+                <option value="0.02">Full Editing Package ($0.02)</option>
+            </select>
+        </div>
+
+        <div class="calc-group">
+            <label for="installments">Payment Plan (Months)</label>
+            <select id="installments">
+                <option value="1">Full Payment (No Installments)</option>
+                <option value="2">2 Months</option>
+                <option value="3">3 Months</option>
+                <option value="4">4 Months</option>
+                <option value="5">5 Months</option>
+                <option value="6">6 Months</option>
+                <option value="7">7 Months</option>
+                <option value="8">8 Months</option>
+                <option value="9">9 Months</option>
+                <option value="10">10 Months</option>
+                <option value="11">11 Months</option>
+                <option value="12">12 Months</option>
+            </select>
+        </div>
+        
+     <div class="calc-display-grid">
+    <div class="calc-result highlight">
+        <span>Total Project Price:</span>
+        <strong id="totalPrice">$0.00</strong>
+    </div>
+    
+    <div class="calc-result highlight">
+        <span>20% Upfront Deposit:</span>
+        <strong id="upfrontPrice">$0.00</strong>
+    </div>
+    
+    <div class="calc-result highlight">
+        <span>Monthly Installment:</span>
+        <strong id="monthlyPrice">$0.00</strong>
+    </div>
+</div>
+    </div>
+    <p class="calc-note">*Monthly installments begin after the 20% deposit is paid.</p>
+</div>
+
+            <div id="manuscript-critique" class="sub-service-box">
+                <h3>Manuscript Critique</h3>
+                <p>Think of this as a "Report Card" for your book. I provide a detailed letter with color-coded notes highlighting your book's strengths and areas for improvement without a full line edit.</p>
+                <ul class="price-list">
+                    <li>Up to 50,000 words <span>$100</span></li>
+                    <li>50,000–80,000 words <span>$150</span></li>
+                    <li>80,000–100,000 words <span>$200</span></li>
+                </ul>
+            </div>
+
+            <div id="poetry" class="sub-service-box">
+                <h3>Poetry Book Editing</h3>
+                <p>Poetry requires a delicate touch. I offer comprehensive editing that respects your rhythm and meter while ensuring emotional clarity and visual impact on the page.</p>
+                <ul class="price-list">
+                    <li>Short (Under 50 pages) <span>$150</span></li>
+                    <li>Medium (50-100 pages) <span>$300</span></li>
+                    <li>Long (100+ pages) <span>$400</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="formatting" class="service-section">
+            <h2 class="section-num">03</h2>
+            <h1 class="section-title">Book Formatting & Publishing</h1>
+            <div class="description-text">
+                <p>I transform your Word document into a professional book. From clickable Tables of Contents for Kindle to perfect margins and headers for print-ready PDFs. I also handle KDP uploads, metadata, and category selection to help your book get discovered.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Ebook Only</h3>
+                    <p class="price">$30 - $300</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Paperback Only</h3>
+                    <p class="price">From $90</p>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Full Publishing Bundle</h3>
+                    <p class="price">From $200</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="branding" class="service-section">
+            <h2 class="section-num">04</h2>
+            <h1 class="section-title">Author Branding Services</h1>
+            <div class="description-text">
+                <p>Stop being just a "writer" and start being a "brand." I help you define your visual identity, voice, and presence across all platforms so readers recognize you instantly.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>The Foundation</h3>
+                    <p class="price">$60</p>
+                    <p class="card-desc">Branding strategy session + custom branding guide.</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Social Presence</h3>
+                    <p class="price">$110</p>
+                    <p class="card-desc">Profile & Cover graphics + 6 custom Instagram templates.</p>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>The Ultimate Brand</h3>
+                    <p class="price">$370</p>
+                    <p class="card-desc">The complete package. Consultation, Socials, Web Identity, and Content Strategy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="content-pulling" class="service-section">
+            <h2 class="section-num">05</h2>
+            <h1 class="section-title">Content Pulling</h1>
+            <div class="description-text">
+                <p>I go through your manuscript to find the most "sharable" moments. Perfect for creating teaser graphics, social media posts, and marketing hype.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Quotes Only</h3>
+                    <p class="price">$50</p>
+                    <p class="card-desc">20 of the most impactful quotes from your book.</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Quotes + Ideas</h3>
+                    <p class="price">$80</p>
+                    <p class="card-desc">20 quotes PLUS 15 blog/social media content ideas based on your story.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="website-creation" class="service-section">
+            <h2 class="section-num">06</h2>
+            <h1 class="section-title">Author Website Creation</h1>
+            <div class="description-text">
+                <p>A professional website is your digital home. I build responsive, SEO-optimized sites that feature your books, mailing list sign-ups, and a blog to connect with your audience.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic (5pgs)</h3>
+                    <p class="price">$350</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Advanced (10pgs)</h3>
+                    <p class="price">$500</p>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Premium (Store)</h3>
+                    <p class="price">$800</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pa-services" class="service-section">
+            <h2 class="section-num">07</h2>
+            <h1 class="section-title">PA Services</h1>
+            <div class="description-text">
+                <p>Focus on your writing while I handle the business side. From email and social media to coordinating ARC and Beta readers, I keep your author career running smoothly.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Monthly PA</h3>
+                    <p class="price">$30 - $100</p>
+                    <p class="card-desc">Email, social media management, and admin support.</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>ARC/Beta Mgmt</h3>
+                    <p class="price">$100 - $600</p>
+                    <p class="card-desc">Coordinating readers, sending files, and collecting feedback.</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Hype Team</h3>
+                    <p class="price">$150 - $600</p>
+                    <p class="card-desc">Managing Discord/FB groups and launch hype strategy.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="package-deals" class="service-section">
+            <h2 class="section-num">08</h2>
+            <h1 class="section-title">PA Package Deals</h1>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Bronze</h3>
+                    <p class="price">$200/mo</p>
+                    <p class="card-desc">2-3 posts/week, Canva graphics, and weekly check-ins.</p>
+                </div>
+                <div class="pricing-card">
+                    <h3>Silver</h3>
+                    <p class="price">$400/mo</p>
+                    <p class="card-desc">4-5 posts/week, 10 custom graphics, and marketing support.</p>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Gold</h3>
+                    <p class="price">$600/mo</p>
+                    <p class="card-desc">Daily posting, 20 graphics, launch campaigns, and community management.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+ 
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Ink & Insights Logo" class="footer-logo">
+                    <p class="tagline">Where Creativity Meets Strategy</p>
+                    <p class="footer-description">Professional book editing services helping authors transform their manuscripts into polished, publishable works.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Developmental Editing</a></li>
+                        <li><a href="services.html">Copy Editing</a></li>
+                        <li><a href="services.html">Proofreading</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ink & Insights. All rights reserved.</p>
+          <p>Made by Avery Jensen</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
