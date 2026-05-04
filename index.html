@@ -11,6 +11,118 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── FAQ ── */
+        .faq-home {
+            padding: 80px 0;
+            background: #fcfdfc;
+        }
+        .faq-home .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+        .faq-item { border-bottom: 1px solid #e4d5d6; }
+        .faq-item:first-of-type { border-top: 1px solid #e4d5d6; }
+        .faq-q {
+            width: 100%; background: none; border: none;
+            text-align: left; padding: 20px 0;
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+            cursor: pointer;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem; font-weight: 400; color: #2c2c2c;
+            transition: color 0.2s;
+        }
+        .faq-q:hover { color: #800220; }
+        .faq-icon {
+            width: 26px; height: 26px; border-radius: 50%;
+            background: #f9f0f2; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: #800220;
+            transition: transform 0.3s, background 0.2s;
+        }
+        .faq-item.open .faq-icon { transform: rotate(45deg); background: #800220; color: #fcfdfc; }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+        .faq-item.open .faq-a { max-height: 260px; padding-bottom: 20px; }
+        .faq-a p { color: #666; font-size: 0.93rem; line-height: 1.75; }
+        .faq-a a { color: #800220; text-decoration: none; }
+        .faq-a a:hover { text-decoration: underline; }
+
+        /* ── BLOG PREVIEW ── */
+        .blog-home {
+            padding: 80px 0;
+            background: #faf7f7;
+        }
+        .blog-home .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .blog-home-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .blog-home-card {
+            background: #fcfdfc;
+            border: 1.5px solid #e4d5d6;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+        .blog-home-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 44px rgba(128,2,32,0.08);
+        }
+        .blog-home-top {
+            background: linear-gradient(135deg, #800220, #5a0118);
+            padding: 30px 26px;
+            position: relative;
+            overflow: hidden;
+        }
+        .blog-home-top::after {
+            content: '';
+            position: absolute;
+            width: 120px; height: 120px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            bottom: -40px; right: -30px;
+        }
+        .blog-home-tag {
+            display: inline-block;
+            background: rgba(228,213,214,0.2); color: #e4d5d6;
+            font-size: 10px; font-weight: 600;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            padding: 3px 11px; border-radius: 20px; margin-bottom: 14px;
+        }
+        .blog-home-top h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem; font-weight: 400;
+            color: #fcfdfc; line-height: 1.35;
+        }
+        .blog-home-body { padding: 24px 26px; }
+        .blog-home-meta {
+            font-size: 10px; letter-spacing: 0.07em;
+            text-transform: uppercase; color: #b1707e;
+            margin-bottom: 12px; display: flex; gap: 14px;
+        }
+        .blog-home-excerpt {
+            color: #2c2c2c; font-size: 0.9rem;
+            line-height: 1.72; margin-bottom: 20px;
+        }
+        .blog-home-read {
+            display: inline-flex; align-items: center; gap: 6px;
+            color: #800220; font-size: 0.85rem; font-weight: 500;
+            text-decoration: none; transition: gap 0.2s;
+        }
+        .blog-home-read:hover { gap: 10px; }
+        .blog-home-cta { text-align: center; margin-top: 36px; }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -109,22 +221,18 @@
                 <h2 class="section-title">Why Work With Me?</h2>
                 <div class="why-grid">
                     <div class="why-card animate-on-scroll">
-                       
                         <h3>Personalized Approach</h3>
                         <p>Every manuscript is unique. I tailor my editing style to preserve your voice while strengthening your story.</p>
                     </div>
                     <div class="why-card animate-on-scroll">
-                   
                         <h3>Open Communication</h3>
                         <p>I believe in collaboration. You'll have direct access to me throughout the entire editing process.</p>
                     </div>
                     <div class="why-card animate-on-scroll">
-                      
                         <h3>Genre Expertise</h3>
                         <p>Experience across multiple genres means I understand the unique conventions and expectations of your audience.</p>
                     </div>
                     <div class="why-card animate-on-scroll">
-                      
                         <h3>Reliable Deadlines</h3>
                         <p>Professional turnaround times without compromising quality. Your timeline matters to me.</p>
                     </div>
@@ -145,6 +253,108 @@
                 </div>
             </div>
         </section>
+
+        <!-- ══════════════════════════════
+             FAQ SECTION
+        ══════════════════════════════ -->
+        <section class="faq-home">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Everything you need to know before we work together</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            How does the free sample edit work?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>I'll edit the first 1,000 words of your manuscript for free — no strings attached. This gives you a real taste of my editing style and lets us see if we're a great fit before you commit to anything. Just <a href="contact.html">reach out</a> to get started!</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            What genres do you work with?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>I work across romance, fantasy, historical fiction, literary fiction, thriller, poetry, and non-fiction. As a multi-genre author myself, I understand the unique conventions and expectations of each genre — and I'll honor them in your manuscript.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            How long does editing take?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>Turnaround time depends on manuscript length and service type. Generally: proofreading takes 1–2 weeks, line/copy editing 2–4 weeks, and developmental editing 3–5 weeks. I'll always give you a clear timeline during our free consultation before we begin.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            Do you offer payment plans?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>Yes! I believe professional editing should be accessible to every serious author. You can split your payment into installments over 2–12 months, starting with a 20% deposit. Use the quote calculator on the <a href="services.html">services page</a> to see your exact monthly breakdown.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            Will you change my writing voice?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>Never. Your voice is what makes your story yours — my job is to make it shine brighter, not replace it with mine. Every suggestion is aimed at strengthening what's already there. You always have the final say on every single change.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            Is my manuscript kept confidential?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>Absolutely. Your manuscript and all project details are kept strictly confidential. I never share, discuss, or reference client work without explicit written permission. Your story is safe with me. 💜</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════
+             BLOG PREVIEW
+        ══════════════════════════════ -->
+        <section class="blog-home">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">From the Desk of Avery</h2>
+                    <p class="section-subtitle">Honest advice for authors, from an editor who's also a writer</p>
+                </div>
+                <div class="blog-home-grid">
+                    <div class="blog-home-card">
+                        <div class="blog-home-top">
+                            <span class="blog-home-tag">Editing 101</span>
+                            <h3>The Difference Between Line Editing & Proofreading (And Why It Matters)</h3>
+                        </div>
+                        <div class="blog-home-body">
+                            <div class="blog-home-meta">
+                                <span>✦ May 2026</span>
+                                <span>5 min read</span>
+                            </div>
+                            <p class="blog-home-excerpt">One of the most common questions I get: "Do I really need both?" The short answer is yes — but they do very different things. Here's exactly what each covers and how to know which one your manuscript needs right now...</p>
+                            <a href="blog.html" class="blog-home-read">Read the full post →</a>
+                        </div>
+                    </div>
+                    <div class="blog-home-card">
+                        <div class="blog-home-top">
+                            <span class="blog-home-tag">For Authors</span>
+                            <h3>5 Signs Your Manuscript Is Ready for a Professional Editor</h3>
+                        </div>
+                        <div class="blog-home-body">
+                            <div class="blog-home-meta">
+                                <span>✦ April 2026</span>
+                                <span>4 min read</span>
+                            </div>
+                            <p class="blog-home-excerpt">Hiring an editor too early is one of the most common mistakes authors make. So how do you know when you're actually ready? Here are the five signs I look for...</p>
+                            <a href="blog.html" class="blog-home-read">Read the full post →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-home-cta">
+                    <a href="blog.html" class="btn btn-primary">Read All Posts</a>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -175,20 +385,24 @@
                 </div>
                 <div class="footer-column">
                     <h4>Connect</h4>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Twitter</a></li>
-                    </ul>
+                                       <ul><li><a href="https://www.instagram.com/inkandinsightsservices/" target="_blank" >Instagram</a></li><li><a href="https://www.threads.com/@inkandinsightsservices?xmt=AQF0D6Vik3rW7hoD8mRCWfiKQADFsPiW2_x5IcpX93g_5wA" target="_blank">Threads</a></li><li><a href="mailto:someone@example.com" target="_blank">E-mail</a></li></ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 Ink & Insights. All rights reserved.</p>
-    <p>Made by Avery Jensen</p>
+                <p>Made by Avery Jensen</p>
             </div>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
 </body>
 </html>
