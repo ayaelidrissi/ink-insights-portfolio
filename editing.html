@@ -37,6 +37,204 @@
         </div>
 
         <section class="content-section">
+          <!-- ═══════════════════════════════════════════════════════════
+     PORTFOLIO STATS + GENRE BREAKDOWN  (polished)
+     Paste this block right AFTER the closing </div> of .page-header
+     and BEFORE <section class="content-section"> (the book grid)
+═══════════════════════════════════════════════════════════ -->
+
+<style>
+    .portfolio-stats { padding: 10px 0 30px; }
+
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        max-width: 760px;
+        margin: 0 auto 50px;
+        padding: 0 20px;
+    }
+    .stat-block {
+        text-align: center;
+        padding: 30px 14px;
+        background: linear-gradient(160deg, #ffffff, #fbeef0);
+        border: 1px solid #efd9dd;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(128, 2, 32, 0.07);
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .stat-block::after {
+        content: '';
+        position: absolute;
+        width: 60px; height: 60px;
+        border-radius: 50%;
+        background: rgba(128, 2, 32, 0.04);
+        bottom: -22px; right: -18px;
+    }
+    .stat-block:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 40px rgba(128, 2, 32, 0.12);
+    }
+    .stat-number {
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--primary);
+        line-height: 1;
+        margin-bottom: 8px;
+        position: relative;
+        z-index: 1;
+    }
+    .stat-number span { color: var(--accent); }
+    .stat-label {
+        font-size: 0.72rem;
+        color: #8a5560;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        position: relative;
+        z-index: 1;
+    }
+    /* highlighted "feature" stat card — solid maroon */
+    .stat-block.feature {
+        background: linear-gradient(160deg, #800220, #5a0118);
+        border-color: #5a0118;
+        box-shadow: 0 10px 30px rgba(128, 2, 32, 0.22);
+    }
+    .stat-block.feature::after { background: rgba(255, 255, 255, 0.06); }
+    .stat-block.feature .stat-number { color: #fff; }
+    .stat-block.feature .stat-number span { color: #e8b9c4; }
+    .stat-block.feature .stat-label { color: #f0d5da; }
+
+    /* ── GENRE BREAKDOWN ── */
+    .genre-breakdown {
+        max-width: 620px;
+        margin: 0 auto 30px;
+        padding: 0 20px;
+    }
+    .genre-breakdown h2 {
+        text-align: center;
+        font-family: var(--font-heading);
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 24px;
+    }
+    .genre-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+    .genre-name {
+        width: 165px;
+        flex-shrink: 0;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: var(--text-dark);
+        text-align: right;
+    }
+    .genre-track {
+        flex: 1;
+        background: #f4e7e9;
+        border-radius: 30px;
+        height: 26px;
+        padding: 3px;
+        box-shadow: inset 0 1px 3px rgba(128, 2, 32, 0.08);
+    }
+    .genre-fill {
+        height: 100%;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 11px;
+        box-sizing: border-box;
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        transition: width 0.9s ease;
+    }
+    .fill-top { background: linear-gradient(90deg, #a03048, #800220); }
+    .fill-mid { background: linear-gradient(90deg, #c08596, #a03048); }
+    .fill-low { background: linear-gradient(90deg, #d3aab4, #b1707e); }
+    .genre-extra {
+        text-align: center;
+        font-size: 0.78rem;
+        color: var(--text-light);
+        font-style: italic;
+        margin-top: 18px;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .stats-row { grid-template-columns: 1fr 1fr; gap: 14px; }
+        .stat-number { font-size: 2.1rem; }
+        .genre-name { width: 108px; font-size: 0.76rem; }
+    }
+</style>
+
+<section class="portfolio-stats">
+    <div class="container">
+        <div class="stats-row">
+            <div class="stat-block">
+                <div class="stat-number">19<span>+</span></div>
+                <div class="stat-label">Books Edited</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">12</div>
+                <div class="stat-label">Genres</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Editing Services</div>
+            </div>
+            <div class="stat-block">
+                <div class="stat-number">2<span>+</span></div>
+                <div class="stat-label">Repeat Authors</div>
+            </div>
+        </div>
+
+        <div class="genre-breakdown">
+            <h2>Genres I've Worked In</h2>
+
+            <div class="genre-row">
+                <span class="genre-name">Contemporary Romance</span>
+                <div class="genre-track"><div class="genre-fill fill-top" style="width:100%;">4</div></div>
+            </div>
+            <div class="genre-row">
+                <span class="genre-name">Romantasy</span>
+                <div class="genre-track"><div class="genre-fill fill-top" style="width:100%;">4</div></div>
+            </div>
+              <div class="genre-row">
+                <span class="genre-name">Fantasy</span>
+                <div class="genre-track"><div class="genre-fill fill-mid" style="width:67%;">2</div></div>
+            </div>
+            <div class="genre-row">
+                <span class="genre-name">Poetry</span>
+                <div class="genre-track"><div class="genre-fill fill-mid" style="width:67%;">2</div></div>
+            </div>
+            <div class="genre-row">
+                <span class="genre-name">Historical Suspense</span>
+                <div class="genre-track"><div class="genre-fill fill-mid" style="width:67%;">2</div></div>
+            </div>
+            <div class="genre-row">
+                <span class="genre-name">Dark Romance</span>
+                <div class="genre-track"><div class="genre-fill fill-mid" style="width:67%;">2</div></div>
+            </div>
+            <div class="genre-row">
+                <span class="genre-name">Others</span>
+                <div class="genre-track"><div class="genre-fill fill-low" style="width:33%;">1 each</div></div>
+            </div>
+
+            <p class="genre-extra">
+          Dystopian Sci-Fi · Horror · Contemporary Fiction
+            </p>
+        </div>
+    </div>
+</section>
            <div class="testimonial-grid">
 
   <div class="card">
@@ -335,6 +533,59 @@ I could not be happier.  10/10 recommend.  "</p>
     </div>
   </div>
 
+  <div class="card">
+    <div class="header">
+      <img src="Book Covers/Elegant Minimalist A4 Stationery Paper Document.png" alt="A novel chance" class="book-cover">
+    </div>
+    <div class="content">
+      <h2 class="title">A Novel Chance</h2>
+        <div class="genre-tags">
+            <span class="genre-tag">Contemporary Romance</span> </br>
+      </div>
+      <p class="author">by E. S. Rosalynn</p>
+      <p class="feedback">"We had a wonderful experience working with Avery at Ink & Insights. Despite a tight turnaround, she was thorough, detail-oriented, and incredibly reliable. Her careful eye helped polish the manuscript and ensure everything was clean and ready to go. We truly appreciated her efficiency and would gladly work with her again."</p>
+      <div class="tags">
+        <span class="tag">Proofreading</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="header">
+      <img src="Book Covers/2.png" alt="The Brotherhood" class="book-cover">
+    </div>
+    <div class="content">
+      <h2 class="title">Until Fire Turns To Gold</h2>
+        <div class="genre-tags">
+            <span class="genre-tag">Romantasy</span> </br>
+      </div>
+      <p class="author">by Fiore Mae Belle</p>
+      <p class="feedback">"Working with Avery has been a dream! She’s kind, patient, and she catches everything! I love her communication. I was scared about working with an editor, but I had the best experience I could ever imagine. She had the most care for my book, and I can’t wait to work with her again!"</p>
+      <div class="tags">
+        <span class="tag">Line / copy editing</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="header">
+      <img src="Book Covers/1.png" alt="Redfield" class="book-cover">
+    </div>
+    <div class="content">
+      <h2 class="title">Redfield</h2>
+        <div class="genre-tags">
+            <span class="genre-tag">Fantasy</span> </br>
+      </div>
+      <p class="author">by Victoria Cage</p>
+   <!--   <p class="feedback">"Working with Avery has been a dream! She’s kind, patient, and she catches everything! I love her communication. I was scared about working with an editor, but I had the best experience I could ever imagine. She had the most care for my book, and I can’t wait to work with her again!"</p>-->
+      <div class="tags">
+        <span class="tag">Developmental + Line / copy editing</span>
+      </div>
+    </div>
+  </div>
+
+
 </div>
 
         </section>
@@ -358,7 +609,7 @@ I could not be happier.  10/10 recommend.  "</p>
                 </div>
                 <div class="footer-column">
                     <h4>Connect</h4>
-                              <ul><li><a href="https://www.instagram.com/inkandinsightsservices/" target="_blank" >Instagram</a></li><li><a href="https://www.threads.com/@inkandinsightsservices?xmt=AQF0D6Vik3rW7hoD8mRCWfiKQADFsPiW2_x5IcpX93g_5wA" target="_blank">Threads</a></li><li><a href="mailto:someone@example.com" target="_blank">E-mail</a></li></ul>
+                              <ul><li><a href="https://www.instagram.com/inkandinsightsservices/" target="_blank" >Instagram</a></li><li><a href="https://www.threads.com/@inkandinsightsservices?xmt=AQF0D6Vik3rW7hoD8mRCWfiKQADFsPiW2_x5IcpX93g_5wA" target="_blank">Threads</a></li><li><a href="mailto:inkndinsightsservices@gmail.com" target="_blank">E-mail</a></li></ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -367,6 +618,7 @@ I could not be happier.  10/10 recommend.  "</p>
             </div>
         </div>
     </footer>
+    
     <script src="script.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
 </body>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Ink & Insights</title>
       <link rel="icon" type="image/png" href="logo.png">
-    <meta name="description" content="Professional book editing services including developmental editing, copy editing, and proofreading.">
+    <meta name="description" content="Professional book editing services including developmental editing, line editing, copy editing, proofreading, formatting, and manuscript critique.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="pages-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        /* ── BUDGET STRIP ── */
+ .sticky-sample-bar {
+        position: fixed;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1500;
+        width: calc(100% - 40px);
+        max-width: 620px;
+        background: #fbeef0;
+        border-top: 3px solid var(--primary);
+        border-radius: 14px;
+        padding: 16px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+        box-shadow: 0 8px 26px rgba(128, 2, 32, 0.15);
+        font-family: var(--font-body);
+    }
+ 
+    .sticky-sample-bar .sample-text {
+        font-size: 0.95rem;
+        color: #5a2029;
+        line-height: 1.4;
+    }
+ 
+    .sticky-sample-bar .sample-text strong {
+        font-family: var(--font-heading);
+        font-weight: 500;
+        color: var(--primary);
+    }
+ 
+    .sticky-sample-bar .sample-btn {
+        background: var(--primary);
+        color: var(--white);
+        padding: 11px 24px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        transition: all 0.3s;
+    }
+ 
+    .sticky-sample-bar .sample-btn:hover {
+        background: var(--accent);
+        transform: translateY(-2px);
+    }
+ 
+    /* Mobile: center text over button */
+    @media (max-width: 600px) {
+        .sticky-sample-bar {
+            flex-direction: column;
+            text-align: center;
+            gap: 12px;
+            bottom: 12px;
+            padding: 14px 18px;
+        }
+        .sticky-sample-bar .sample-text { font-size: 0.85rem; }
+    }
         .budget-strip {
             background: linear-gradient(135deg, #f9f0f2, #fcfdfc);
             border: 1.5px solid #e4d5d6;
@@ -157,6 +217,34 @@
         @media (max-width: 600px) {
             .budget-strip { padding: 32px 22px; }
         }
+
+        /* ── RETURNING CLIENT CHECKBOX ── */
+        .returning-client-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-weight: 500 !important;
+            color: var(--text-dark);
+            background: #fbeef0;
+            border: 1px solid #e4d5d6;
+            border-radius: 10px;
+            padding: 12px 16px;
+            transition: all 0.2s ease;
+        }
+        .returning-client-label:hover {
+            border-color: var(--primary);
+        }
+        .returning-client-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+        .returning-client-label strong {
+            color: var(--primary);
+        }
     </style>
 </head>
 <body>
@@ -191,7 +279,7 @@
         <div class="page-header">
             <div class="container">
                 <h1 class="page-title">Services</h1>
-                <p class="page-subtitle">At Ink and Insights Services, I believe in offering flexible, personalized editing and PA services that cater to your specific needs. Whether you're an author working on your latest manuscript or someone who needs extra assistance with your author brand, I've got you covered.</p>
+                <p class="page-subtitle">At Ink and Insights Services, I believe in offering flexible, personalized editing that caters to your specific needs. Whether you're an author working on your latest manuscript or polishing a poetry collection, I've got you covered.</p>
             </div>
         </div>
 
@@ -199,40 +287,26 @@
             <aside class="services-sidebar">
                 <nav class="side-nav">
                     <ul>
-                        <li><a href="#consultation">01. Free Consultation</a></li>
                         <li>
-                            <a href="#editing">02. Editing Services</a>
+                            <a href="#editing">01. Editing Services</a>
                             <ul class="sub-menu">
                                 <li><a href="#manuscript-critique">Manuscript Critique</a></li>
                                 <li><a href="#poetry">Poetry Books</a></li>
                             </ul>
                         </li>
-                        <li><a href="#formatting">03. Book Formatting</a></li>
-                        <li><a href="#branding">04. Author Branding</a></li>
-                        <li><a href="#content-pulling">05. Content Pulling</a></li>
-                        <li><a href="#website-creation">06. Website Creation</a></li>
-                        <li><a href="#pa-services">07. PA Services</a></li>
-                        <li><a href="#package-deals">08. PA Package Deals</a></li>
+                        <li><a href="#formatting">02. Book Formatting</a></li>
                     </ul>
                 </nav>
             </aside>
 
             <div class="services-content-wrapper">
 
-                <section id="consultation" class="service-section">
-                    <h2 class="section-num">01</h2>
-                    <h1 class="section-title">Free Consultation*</h1>
-                    <div class="description-text">
-                        <p>Every great book starts with a conversation. During this 30-60 minute session, we dive deep into your manuscript's status, your publishing goals, and your budget. I don't believe in "one size fits all"—I will create a custom roadmap that ensures you only pay for what your book actually needs to succeed.</p>
-                        <p class="disclaimer-box">Prices are flexible and payment plans are available to make high-quality editing accessible for every author.</p>
-                    </div>
-                </section>
-
                 <section id="editing" class="service-section">
-                    <h2 class="section-num">02</h2>
+                    <h2 class="section-num">01</h2>
                     <h1 class="section-title">Editing Services</h1>
                     <div class="description-text">
                         <p>From the first draft to the final polish, I provide high-level editorial support to ensure your story resonates with readers and meets industry standards.</p>
+                        <p class="disclaimer-box">Prices are flexible and payment plans are available to make high-quality editing accessible for every author.</p>
                     </div>
 
                     <!-- Individual services -->
@@ -243,9 +317,20 @@
                             <p class="card-desc">The "Big Picture" edit. We look at plot holes, character arcs, pacing, and story structure to build a solid foundation.</p>
                         </div>
                         <div class="pricing-card">
-                            <h3>Line & Copyediting</h3>
+                            <h3>Line Editing</h3>
                             <p class="price">$0.007<span>/word</span></p>
-                            <p class="card-desc">The "Sentence Level" edit. I refine your unique voice, improving flow, clarity, and technical correctness while keeping your tone intact.</p>
+                            <p class="card-desc">The "Sentence Level" edit. I refine your unique voice, improving flow, rhythm, and clarity while keeping your tone intact.</p>
+                        </div>
+                        <div class="pricing-card">
+                            <h3>Copy Editing</h3>
+                            <p class="price">$0.006<span>/word</span></p>
+                            <p class="card-desc">The "Technical" edit. I tighten grammar, syntax, consistency, and correctness so your prose reads clean and professional.</p>
+                        </div>
+                        <div class="pricing-card featured">
+                            <div class="badge">Most Popular</div>
+                            <h3>Line + Copy Editing</h3>
+                            <p class="price">$0.008<span>/word</span></p>
+                            <p class="card-desc">Both passes together — voice, flow, and rhythm refined alongside grammar, syntax, and polish. The complete sentence-level edit at a combined rate.</p>
                         </div>
                         <div class="pricing-card">
                             <h3>Proofreading</h3>
@@ -259,8 +344,8 @@
                         <div class="bundle-card">
                             <span class="bundle-tag">Bundle</span>
                             <h3>Development + Proofread</h3>
-                            <div class="bundle-price">$0.012<span>/word</span></div>
-                            <p class="bundle-savings">Save 14% vs. booking separately</p>
+                            <div class="bundle-price">$0.010<span>/word</span></div>
+                            <p class="bundle-savings">Save 29% vs. booking separately</p>
                             <ul class="bundle-includes">
                                 <li>Full structural & developmental edit — plot, character, pacing, structure</li>
                                 <li>Final proofread pass — typos, grammar, punctuation before publish</li>
@@ -268,12 +353,32 @@
                         </div>
                         <div class="bundle-card">
                             <span class="bundle-tag">Bundle</span>
-                            <h3>Line/Copy + Development</h3>
-                            <div class="bundle-price">$0.013<span>/word</span></div>
-                            <p class="bundle-savings">Save 19% vs. booking separately</p>
+                            <h3>Development + Copy</h3>
+                            <div class="bundle-price">$0.011<span>/word</span></div>
+                            <p class="bundle-savings">Save 27% vs. booking separately</p>
                             <ul class="bundle-includes">
                                 <li>Full structural & developmental edit — big picture story work</li>
-                                <li>Line & copy edit — voice, flow, clarity, and technical polish</li>
+                                <li>Copy edit — grammar, syntax, consistency, and polish</li>
+                            </ul>
+                        </div>
+                        <div class="bundle-card">
+                            <span class="bundle-tag">Bundle</span>
+                            <h3>Development + Line</h3>
+                            <div class="bundle-price">$0.012<span>/word</span></div>
+                            <p class="bundle-savings">Save 25% vs. booking separately</p>
+                            <ul class="bundle-includes">
+                                <li>Full structural & developmental edit — big picture story work</li>
+                                <li>Line edit — voice, flow, rhythm, and clarity</li>
+                            </ul>
+                        </div>
+                        <div class="bundle-card">
+                            <span class="bundle-tag">Bundle</span>
+                            <h3>Development + Line/Copy</h3>
+                            <div class="bundle-price">$0.013<span>/word</span></div>
+                            <p class="bundle-savings">Save 24% vs. booking separately</p>
+                            <ul class="bundle-includes">
+                                <li>Full structural & developmental edit — big picture story work</li>
+                                <li>Line + copy edit — the complete sentence-level pass</li>
                             </ul>
                         </div>
                     </div>
@@ -291,11 +396,21 @@
                                 <label for="editType">Service Type</label>
                                 <select id="editType">
                                     <option value="0.009">Structural & Developmental ($0.009)</option>
-                                    <option value="0.007">Line & Copyediting ($0.007)</option>
+                                    <option value="0.007">Line Editing ($0.007)</option>
+                                    <option value="0.006">Copy Editing ($0.006)</option>
+                                    <option value="0.008">Line + Copy Editing ($0.008)</option>
                                     <option value="0.005">Proofreading ($0.005)</option>
-                                    <option value="0.012">Bundle — Development + Proofread ($0.012)</option>
-                                    <option value="0.013">Bundle — Line/Copy + Development ($0.013)</option>
+                                    <option value="0.010">Bundle — Development + Proofread ($0.010)</option>
+                                    <option value="0.011">Bundle — Development + Copy ($0.011)</option>
+                                    <option value="0.012">Bundle — Development + Line ($0.012)</option>
+                                    <option value="0.013">Bundle — Development + Line/Copy ($0.013)</option>
                                 </select>
+                            </div>
+                            <div class="calc-group">
+                                <label class="returning-client-label" for="returningClient">
+                                    <input type="checkbox" id="returningClient">
+                                    <span>I'm a returning client <strong>(15% off)</strong></span>
+                                </label>
                             </div>
                             <div class="calc-group">
                                 <label for="installments">Payment Plan (Months)</label>
@@ -336,7 +451,7 @@
                     <div class="budget-strip">
                         <h2>Is the price a little too much right now?</h2>
                         <p>Don't let budget stop your book from being its best. No tight deadline? Small budget? Fill out the form and I'll get back to you with something that works for us both.</p>
-                        <a href="YOUR_FORM_LINK_HERE" target="_blank" class="btn-budget">Let's figure it out together →</a>
+                        <a href="https://www.jotform.com/form/260745240333046" target="_blank" class="btn-budget">Let's figure it out together →</a>
                     </div>
 
                     <div id="manuscript-critique" class="sub-service-box">
@@ -361,7 +476,7 @@
                 </section>
 
                 <section id="formatting" class="service-section">
-                    <h2 class="section-num">03</h2>
+                    <h2 class="section-num">02</h2>
                     <h1 class="section-title">Book Formatting & Publishing</h1>
                     <div class="description-text">
                         <p>I transform your Word document into a professional book. From clickable Tables of Contents for Kindle to perfect margins and headers for print-ready PDFs. I also handle KDP uploads, metadata, and category selection to help your book get discovered.</p>
@@ -382,124 +497,13 @@
                     </div>
                 </section>
 
-                <section id="branding" class="service-section">
-                    <h2 class="section-num">04</h2>
-                    <h1 class="section-title">Author Branding Services</h1>
-                    <div class="description-text">
-                        <p>Stop being just a "writer" and start being a "brand." I help you define your visual identity, voice, and presence across all platforms so readers recognize you instantly.</p>
-                    </div>
-                    <div class="pricing-grid">
-                        <div class="pricing-card">
-                            <h3>The Foundation</h3>
-                            <p class="price">$60</p>
-                            <p class="card-desc">Branding strategy session + custom branding guide.</p>
-                        </div>
-                        <div class="pricing-card">
-                            <h3>Social Presence</h3>
-                            <p class="price">$110</p>
-                            <p class="card-desc">Profile & Cover graphics + 6 custom Instagram templates.</p>
-                        </div>
-                        <div class="pricing-card featured">
-                            <h3>The Ultimate Brand</h3>
-                            <p class="price">$370</p>
-                            <p class="card-desc">The complete package. Consultation, Socials, Web Identity, and Content Strategy.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="content-pulling" class="service-section">
-                    <h2 class="section-num">05</h2>
-                    <h1 class="section-title">Content Pulling</h1>
-                    <div class="description-text">
-                        <p>I go through your manuscript to find the most "sharable" moments. Perfect for creating teaser graphics, social media posts, and marketing hype.</p>
-                    </div>
-                    <div class="pricing-grid">
-                        <div class="pricing-card">
-                            <h3>Quotes Only</h3>
-                            <p class="price">$50</p>
-                            <p class="card-desc">20 of the most impactful quotes from your book.</p>
-                        </div>
-                        <div class="pricing-card">
-                            <h3>Quotes + Ideas</h3>
-                            <p class="price">$80</p>
-                            <p class="card-desc">20 quotes PLUS 15 blog/social media content ideas based on your story.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="website-creation" class="service-section">
-                    <h2 class="section-num">06</h2>
-                    <h1 class="section-title">Author Website Creation</h1>
-                    <div class="description-text">
-                        <p>A professional website is your digital home. I build responsive, SEO-optimized sites that feature your books, mailing list sign-ups, and a blog to connect with your audience.</p>
-                    </div>
-                    <div class="pricing-grid">
-                        <div class="pricing-card">
-                            <h3>Basic (5pgs)</h3>
-                            <p class="price">$350</p>
-                        </div>
-                        <div class="pricing-card">
-                            <h3>Advanced (10pgs)</h3>
-                            <p class="price">$500</p>
-                        </div>
-                        <div class="pricing-card featured">
-                            <h3>Premium (Store)</h3>
-                            <p class="price">$800</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="pa-services" class="service-section">
-                    <h2 class="section-num">07</h2>
-                    <h1 class="section-title">PA Services</h1>
-                    <div class="description-text">
-                        <p>Focus on your writing while I handle the business side. From email and social media to coordinating ARC and Beta readers, I keep your author career running smoothly.</p>
-                    </div>
-                    <div class="pricing-grid">
-                        <div class="pricing-card">
-                            <h3>Monthly PA</h3>
-                            <p class="price">$30 - $100</p>
-                            <p class="card-desc">Email, social media management, and admin support.</p>
-                        </div>
-                        <div class="pricing-card">
-                            <h3>ARC/Beta Mgmt</h3>
-                            <p class="price">$100 - $600</p>
-                            <p class="card-desc">Coordinating readers, sending files, and collecting feedback.</p>
-                        </div>
-                        <div class="pricing-card">
-                            <h3>Hype Team</h3>
-                            <p class="price">$150 - $600</p>
-                            <p class="card-desc">Managing Discord/FB groups and launch hype strategy.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="package-deals" class="service-section">
-                    <h2 class="section-num">08</h2>
-                    <h1 class="section-title">PA Package Deals</h1>
-                    <div class="pricing-grid">
-                        <div class="pricing-card">
-                            <h3>Bronze</h3>
-                            <p class="price">$200/mo</p>
-                            <p class="card-desc">2-3 posts/week, Canva graphics, and weekly check-ins.</p>
-                        </div>
-                        <div class="pricing-card">
-                            <h3>Silver</h3>
-                            <p class="price">$400/mo</p>
-                            <p class="card-desc">4-5 posts/week, 10 custom graphics, and marketing support.</p>
-                        </div>
-                        <div class="pricing-card featured">
-                            <h3>Gold</h3>
-                            <p class="price">$600/mo</p>
-                            <p class="card-desc">Daily posting, 20 graphics, launch campaigns, and community management.</p>
-                        </div>
-                    </div>
-                </section>
-
             </div>
         </main>
     </main>
-
+<div class="sticky-sample-bar">
+    <span class="sample-text"><strong>Free sample edit</strong> — see my style on your first 1000 words</span>
+    <a href="contact.html" class="sample-btn">Fill out the form</a>
+</div>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -529,9 +533,9 @@
                 <div class="footer-column">
                     <h4>Connect</h4>
                     <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/inkandinsightsservices/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.threads.com/@inkandinsightsservices?xmt=AQF0D6Vik3rW7hoD8mRCWfiKQADFsPiW2_x5IcpX93g_5wA" target="_blank">Threads</a></li>
+                        <li><a href="mailto:inkndinsightsservices@gmail.com" target="_blank">E-mail</a></li>
                     </ul>
                 </div>
             </div>

@@ -142,6 +142,25 @@
             max-width: 520px; margin: 0 auto 28px;
             font-family: 'Inter', sans-serif; color: #f4e9ec;
         }
+        /* self-contained CTA button so it reads correctly on the dark gradient */
+        .article-cta .btn-article {
+            display: inline-block;
+            background: #fcfdfc;
+            color: #800220;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.85rem;
+            padding: 15px 34px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+        .article-cta .btn-article:hover {
+            background: #e4d5d6;
+            transform: translateY(-3px);
+        }
 
         @media (max-width: 600px) {
             .article-hero h1 { font-size: 1.8rem; }
@@ -284,7 +303,7 @@
         <section class="article-cta">
             <h2>Not sure which one your manuscript needs?</h2>
             <p>Let's figure it out together. Tell me where you are in the process and I'll point you toward the right next step — no pressure, no jargon.</p>
-            <a href="../contact.html" class="btn btn-secondary">Get in Touch</a>
+            <a href="../contact.html" class="btn-article">Get in Touch</a>
         </section>
     </main>
 
