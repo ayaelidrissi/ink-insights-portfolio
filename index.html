@@ -3,152 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Line Editing vs Proofreading: What's the Difference? | Ink & Insights</title>
-    <link rel="icon" type="image/png" href="../logo.png">
-    <meta name="description" content="Confused about line editing vs proofreading? Learn exactly what each one does, why they're not the same, and how to know which your manuscript needs right now.">
-    <link rel="canonical" href="https://inkandinsightsservices.com/Blogs/line_vs_copy.html">
-
-    <meta name="google-site-verification" content="koAV1j-8Vczdmrq8UOs5uXQ-I2UBBVh7UIbgNBB3kAk" />
-    <meta property="og:title" content="Line Editing vs Proofreading: What's the Difference?">
-    <meta property="og:description" content="The most common question authors ask me — answered. What each edit covers, and how to know which one your manuscript needs.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://inkandinsightsservices.com/Blogs/line_vs_copy.html">
-
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../pages-styles.css">
+    <title>Ink & Insights | Professional Book Editing Services</title>
+      <link rel="icon" type="image/png" href="logo.png">
+    <meta name="description" content="Professional book editing services. Where creativity meets strategy. Free sample edits and flexible payment plans.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-        /* ── ARTICLE-SPECIFIC STYLES ── */
-        .article-hero {
-            background: linear-gradient(135deg, #800220, #5a0118);
-            color: #fcfdfc;
-            padding: 80px 0 64px;
+        /* ── FAQ ── */
+        .faq-home {
+            padding: 80px 0;
+            background: #fcfdfc;
+        }
+        .faq-home .section-header {
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 48px;
         }
-        .article-hero::after {
-            content: '';
-            position: absolute;
-            width: 220px; height: 220px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.04);
-            bottom: -80px; right: -60px;
-        }
-        .article-hero .container { position: relative; z-index: 1; }
-        .article-tag {
-            display: inline-block;
-            background: rgba(228,213,214,0.2); color: #e4d5d6;
-            font-size: 11px; font-weight: 600;
-            letter-spacing: 0.12em; text-transform: uppercase;
-            padding: 4px 14px; border-radius: 20px; margin-bottom: 20px;
-        }
-        .article-hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.4rem; font-weight: 600;
-            line-height: 1.2; max-width: 720px; margin: 0 auto 18px;
-        }
-        .article-meta {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.8rem; letter-spacing: 0.06em;
-            text-transform: uppercase; color: #e4d5d6;
-            display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-        }
-
-        .article-body {
-            max-width: 720px;
+        .faq-list {
+            max-width: 760px;
             margin: 0 auto;
-            padding: 64px 24px 40px;
-            font-family: 'Inter', sans-serif;
-            color: #2c2c2c;
-            line-height: 1.8;
-            font-size: 1.05rem;
         }
-        .article-body .lede {
+        .faq-item { border-bottom: 1px solid #e4d5d6; }
+        .faq-item:first-of-type { border-top: 1px solid #e4d5d6; }
+        .faq-q {
+            width: 100%; background: none; border: none;
+            text-align: left; padding: 20px 0;
+            display: flex; justify-content: space-between; align-items: center; gap: 16px;
+            cursor: pointer;
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem; font-style: italic;
-            color: #800220; line-height: 1.55;
-            margin-bottom: 36px;
+            font-size: 1.1rem; font-weight: 400; color: #2c2c2c;
+            transition: color 0.2s;
         }
-        .article-body h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem; font-weight: 600;
-            color: #800220; line-height: 1.25;
-            margin: 48px 0 16px;
+        .faq-q:hover { color: #800220; }
+        .faq-icon {
+            width: 26px; height: 26px; border-radius: 50%;
+            background: #f9f0f2; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 15px; color: #800220;
+            transition: transform 0.3s, background 0.2s;
         }
-        .article-body p { margin-bottom: 22px; }
-        .article-body ul { margin: 0 0 22px 26px; }
-        .article-body li { margin-bottom: 10px; }
-        .article-body strong { color: #800220; font-weight: 600; }
-        .article-body em { color: #b1707e; font-style: italic; }
-
-        .compare {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px; margin: 36px 0;
-        }
-        .compare .card {
-            border: 1px solid #e4d5d6;
-            border-top: 4px solid #b1707e;
-            border-radius: 16px;
-            padding: 26px;
-            background: #faf7f7;
-        }
-        .compare .card h4 {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem; color: #800220;
-            margin-bottom: 14px; text-transform: uppercase;
-            letter-spacing: 0.08em; font-weight: 600;
-        }
-        .compare .card ul { margin-left: 20px; font-size: 0.92rem; line-height: 1.65; }
-        .compare .card li { margin-bottom: 8px; }
-        .compare .card em { color: #800220; }
-
-        .pullquote {
-            font-family: 'Playfair Display', serif;
-            border-left: 4px solid #b1707e;
-            padding: 8px 0 8px 26px;
-            margin: 40px 0;
-            font-size: 1.4rem; font-style: italic;
-            color: #800220; line-height: 1.5;
-        }
-
-        .gut-check {
-            background: #f9f0f2;
-            border-radius: 16px;
-            padding: 26px 30px;
-            margin: 40px 0;
-        }
-        .gut-check strong {
-            display: block; margin-bottom: 8px;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem; color: #800220;
-        }
-
-        .article-cta {
-            background: linear-gradient(135deg, #b1707e, #800220);
-            color: #fcfdfc;
-            text-align: center;
-            padding: 64px 24px;
-        }
-        .article-cta h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.9rem; font-weight: 600;
-            margin-bottom: 14px; color: #fcfdfc;
-        }
-        .article-cta p {
-            max-width: 520px; margin: 0 auto 28px;
-            font-family: 'Inter', sans-serif; color: #f4e9ec;
-        }
-
-        @media (max-width: 600px) {
-            .article-hero h1 { font-size: 1.8rem; }
-            .compare { grid-template-columns: 1fr; }
-            .article-body { padding: 44px 20px 28px; }
-        }
+        .faq-item.open .faq-icon { transform: rotate(45deg); background: #800220; color: #fcfdfc; }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+        .faq-item.open .faq-a { max-height: 260px; padding-bottom: 20px; }
+        .faq-a p { color: #666; font-size: 0.93rem; line-height: 1.75; }
+        .faq-a a { color: #800220; text-decoration: none; }
+        .faq-a a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -156,8 +58,8 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-wrapper">
-                <a href="../index.html" class="logo">
-                    <img src="../logo.png" alt="Ink & Insights Logo">
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="Ink & Insights Logo">
                     <span>Ink & Insights</span>
                 </a>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
@@ -166,127 +68,176 @@
                     <span></span>
                 </button>
                 <ul class="nav-menu">
-                    <li><a href="../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../services.html" class="nav-link">Services</a></li>
-                    <li><a href="../work-with-me.html" class="nav-link">Work With Me</a></li>
-                    <li><a href="../projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="../blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="../about.html" class="nav-link">About</a></li>
-                    <li><a href="../contact.html" class="nav-link cta-nav">Contact</a></li>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="work-with-me.html" class="nav-link">Work With Me</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link cta-nav">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
-        <!-- Article Hero -->
-        <section class="article-hero">
+        <!-- Hero Section -->
+        <section class="hero">
             <div class="container">
-                <span class="article-tag">Editing 101</span>
-                <h1>The Difference Between Line Editing &amp; Proofreading (And Why It Matters)</h1>
-                <div class="article-meta">
-                    <span>By Avery Jensen</span>
-                    <span>May 2026</span>
-                    <span>5 min read</span>
+                <div class="hero-content">
+                    <h1 class="hero-title">Where Creativity Meets Strategy</h1>
+                    <p class="hero-subtitle">Your Manuscript Fairy Godmother 🪄</p>
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn btn-primary">Get Free Sample Edit</a>
+                        <a href="services.html" class="btn btn-secondary">View Services</a>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🤍</span>
+                            <span>Free Sample Edits</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🤍</span>
+                            <span>Flexible Payment Plans</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🤍</span>
+                            <span>Quick Turnaround</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Article Body -->
-        <article class="article-body">
-
-            <p class="lede">"Do I really need both?" It's the question I hear more than almost any other — and it's a fair one. Line editing and proofreading sound like they overlap, so paying for both can feel like paying twice for the same thing. They don't overlap. They sit at opposite ends of the editing journey, and confusing them is one of the easiest ways to spend money on the wrong help at the wrong time.</p>
-
-            <p>Here's the simplest way I can put it: <strong>line editing makes your sentences better. Proofreading makes sure your sentences are correct.</strong> One is about craft and voice. The other is about catching the final mistakes before your reader ever sees them. You can't proofread your way to better prose, and you shouldn't be reworking sentences when you're supposed to be doing a final polish.</p>
-
-            <p>Let me break down what each one actually does.</p>
-
-            <h2>What line editing actually covers</h2>
-
-            <p>Line editing happens at the level of the sentence and the paragraph. I'm reading your prose closely — not for typos, but for how it <em>works</em>. Does this sentence carry its weight? Is the rhythm doing what you want? Are you telling me a character is anxious when the sentence could simply make me feel it?</p>
-
-            <p>When I line edit, I'm paying attention to:</p>
-            <ul>
-                <li><strong>Flow and rhythm</strong> — how sentences move into one another, and whether the pacing matches the moment.</li>
-                <li><strong>Word choice</strong> — swapping the vague word for the precise one, trimming the ones that aren't earning their place.</li>
-                <li><strong>Clarity</strong> — untangling sentences that make a reader stop and re-read.</li>
-                <li><strong>Tone and voice</strong> — strengthening what's already yours, never replacing it with mine.</li>
-                <li><strong>Repetition and crutch words</strong> — the phrases you lean on without realizing it.</li>
-            </ul>
-
-            <p>Line editing is creative, collaborative work. It's the stage where your writing goes from "good" to "unmistakably yours, only sharper." It is <strong>not</strong> a final step — there's still going to be back-and-forth, revision, and new sentences written. Which is exactly why proofreading comes later.</p>
-
-            <h2>What proofreading actually covers</h2>
-
-            <p>Proofreading is the last set of eyes before your manuscript goes out into the world. By this point the writing is locked. I'm not rephrasing anything or questioning your pacing — I'm hunting for the small, objective errors that slip past everyone, including the author who has read the page forty times.</p>
-
-            <p>When I proofread, I'm catching:</p>
-            <ul>
-                <li><strong>Typos and spelling</strong> — the "form" that should be "from."</li>
-                <li><strong>Punctuation</strong> — the missing comma, the rogue apostrophe.</li>
-                <li><strong>Grammar slips</strong> — subject-verb disagreements, tense wobbles.</li>
-                <li><strong>Consistency</strong> — is it "grey" or "gray," is a character's name spelled the same way throughout.</li>
-                <li><strong>Formatting</strong> — spacing, indentation, stray double spaces, heading consistency.</li>
-            </ul>
-
-            <p>Proofreading is precise, technical, and final. Done well, it's invisible — the reader never notices it, because there's nothing left to trip over.</p>
-
-            <div class="compare">
-                <div class="card">
-                    <h4>Line Editing</h4>
-                    <ul>
-                        <li>Improves <em>how</em> you say it</li>
-                        <li>Sentence flow &amp; rhythm</li>
-                        <li>Word choice &amp; clarity</li>
-                        <li>Voice &amp; tone</li>
-                        <li>Creative &amp; collaborative</li>
-                        <li>Comes <strong>before</strong> the final draft</li>
-                    </ul>
+        <!-- Services Preview -->
+        <section class="services-preview content-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">My Services</h2>
+                    <p class="section-subtitle">Comprehensive editing solutions tailored to your needs</p>
                 </div>
-                <div class="card">
-                    <h4>Proofreading</h4>
-                    <ul>
-                        <li>Confirms it's <em>correct</em></li>
-                        <li>Typos &amp; spelling</li>
-                        <li>Punctuation &amp; grammar</li>
-                        <li>Consistency &amp; formatting</li>
-                        <li>Technical &amp; final</li>
-                        <li>Comes <strong>last</strong>, before publishing</li>
-                    </ul>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                    
+                        <h3>Developmental Editing</h3>
+                        <p>Big-picture feedback on plot, character development, pacing, and story structure.</p>
+                        <a href="services.html" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-card featured animate-on-scroll">
+                        <div class="badge">Most Popular</div> <br>
+                  
+                        <h3>Line / copy Editing</h3>
+                        <p>Line-by-line editing focusing on grammar, syntax, clarity, and flow.</p>
+                        <a href="services.html" class="service-link">Learn More →</a>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                     
+                        <h3>Proofreading</h3>
+                        <p>Final polish to catch typos, formatting issues, and minor errors.</p>
+                        <a href="services.html" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="services.html" class="btn btn-primary">View All Services</a>
                 </div>
             </div>
-
-            <div class="pullquote">"Line editing is the rehearsal where the performance finds its shape. Proofreading is the moment just before the curtain rises, making sure nothing's out of place."</div>
-
-            <h2>So — do you need both?</h2>
-
-            <p>For most manuscripts headed to publication, yes. They do different jobs at different stages, and skipping either one shows. A book that's been beautifully line edited but never proofread can still embarrass an author with a typo on page three. A book that's been proofread but never line edited might be technically flawless and still read flat.</p>
-
-            <p>But you don't need both <em>at the same time</em>, and you may not need both <em>right now</em>. Here's the order I'd suggest thinking about it:</p>
-
-            <ul>
-                <li>Still shaping the big picture — plot, characters, structure? You're at the <strong>developmental editing</strong> stage, before either of these.</li>
-                <li>Story's solid but the prose feels clunky or uneven? You need a <strong>line edit</strong>.</li>
-                <li>Everything's final, polished, and you're nearly ready to publish? Time for a <strong>proofread</strong>.</li>
-            </ul>
-
-            <div class="gut-check">
-                <strong>A quick gut check</strong>
-                If you're still planning to change sentences, it's too early to proofread — you'd just be re-introducing errors after the polish. Line edit first, lock the prose, then proofread last.
-            </div>
-
-            <h2>The bottom line</h2>
-
-            <p>Line editing and proofreading aren't competing services — they're partners that happen to live at opposite ends of the same journey. Knowing the difference means you spend your editing budget where it'll actually help, in the order that makes sense. And if you're not sure which stage you're at, that's exactly the kind of thing worth a quick conversation before you commit to anything.</p>
-
-        </article>
-
-        <!-- Article CTA -->
-        <section class="article-cta">
-            <h2>Not sure which one your manuscript needs?</h2>
-            <p>Let's figure it out together. Tell me where you are in the process and I'll point you toward the right next step — no pressure, no jargon.</p>
-            <a href="../contact.html" class="btn btn-secondary">Get in Touch</a>
         </section>
+
+        <!-- Why Choose Me -->
+        <section class="why-choose content-section">
+            <div class="container">
+                <h2 class="section-title">Why Work With Me?</h2>
+                <div class="why-grid">
+                    <div class="why-card animate-on-scroll">
+                        <h3>Personalized Approach</h3>
+                        <p>Every manuscript is unique. I tailor my editing style to preserve your voice while strengthening your story.</p>
+                    </div>
+                    <div class="why-card animate-on-scroll">
+                        <h3>Open Communication</h3>
+                        <p>I believe in collaboration. You'll have direct access to me throughout the entire editing process.</p>
+                    </div>
+                    <div class="why-card animate-on-scroll">
+                        <h3>Genre Expertise</h3>
+                        <p>Experience across multiple genres means I understand the unique conventions and expectations of your audience.</p>
+                    </div>
+                    <div class="why-card animate-on-scroll">
+                        <h3>Reliable Deadlines</h3>
+                        <p>Professional turnaround times without compromising quality. Your timeline matters to me.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-box-large">
+                    <h2>Ready to Transform Your Manuscript?</h2>
+                    <p>Let's start with a free sample edit to see if we're a good fit!</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary">Get Free Sample</a>
+                        <a href="about.html" class="btn btn-secondary">Learn About Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════
+             FAQ SECTION
+        ══════════════════════════════ -->
+        <section class="faq-home">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Everything you need to know before we work together</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            How does the free sample edit work?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>I'll edit the first 1,000 words of your manuscript for free — no strings attached. This gives you a real taste of my editing style and lets us see if we're a great fit before you commit to anything. Just <a href="contact.html">reach out</a> to get started!</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            What genres do you work with?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>I work across romance, fantasy, historical fiction, literary fiction, thriller, poetry, and non-fiction. As a multi-genre author myself, I understand the unique conventions and expectations of each genre — and I'll honor them in your manuscript.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            How long does editing take?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>Turnaround time depends on manuscript length and service type. Generally: proofreading takes 1–2 weeks, line/copy editing 2–4 weeks, and developmental editing 3–5 weeks. I'll always give you a clear timeline during our free consultation before we begin.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            Do you offer payment plans?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>Yes! I believe professional editing should be accessible to every serious author. You can split your payment into installments over 2–12 months, starting with a 20% deposit. Use the quote calculator on the <a href="services.html">services page</a> to see your exact monthly breakdown.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            Will you change my writing voice?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>Never. Your voice is what makes your story yours — my job is to make it shine brighter, not replace it with mine. Every suggestion is aimed at strengthening what's already there. You always have the final say on every single change.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q" onclick="toggleFaq(this)">
+                            Is my manuscript kept confidential?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-a"><p>Absolutely. Your manuscript and all project details are kept strictly confidential. I never share, discuss, or reference client work without explicit written permission. Your story is safe with me. 💜</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
@@ -294,30 +245,29 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <img src="../logo.png" alt="Ink & Insights Logo" class="footer-logo">
+                    <img src="logo.png" alt="Ink & Insights Logo" class="footer-logo">
                     <p class="tagline">Where Creativity Meets Strategy</p>
                     <p class="footer-description">Professional book editing services helping authors transform their manuscripts into polished, publishable works.</p>
                 </div>
                 <div class="footer-column">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="../services.html">Developmental Editing</a></li>
-                        <li><a href="../services.html">Copy Editing</a></li>
-                        <li><a href="../services.html">Proofreading</a></li>
+                        <li><a href="services.html">Developmental Editing</a></li>
+                        <li><a href="services.html">Copy Editing</a></li>
+                        <li><a href="services.html">Proofreading</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../projects.html">Portfolio</a></li>
-                        <li><a href="../blog.html">Blog</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Connect</h4>
-                    <ul><li><a href="https://www.instagram.com/inkandinsightsservices/" target="_blank">Instagram</a></li><li><a href="https://www.threads.com/@inkandinsightsservices?xmt=AQF0D6Vik3rW7hoD8mRCWfiKQADFsPiW2_x5IcpX93g_5wA" target="_blank">Threads</a></li><li><a href="mailto:inkndinsightsservices@gmail.com" target="_blank">E-mail</a></li></ul>
+                                       <ul><li><a href="https://www.instagram.com/inkandinsightsservices/" target="_blank" >Instagram</a></li><li><a href="https://www.threads.com/@inkandinsightsservices?xmt=AQF0D6Vik3rW7hoD8mRCWfiKQADFsPiW2_x5IcpX93g_5wA" target="_blank">Threads</a></li><li><a href="mailto:inkndinsightsservices@gmail.com" target="_blank">E-mail</a></li></ul>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -327,7 +277,15 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+        function toggleFaq(btn) {
+            const item = btn.parentElement;
+            const isOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+            if (!isOpen) item.classList.add('open');
+        }
+    </script>
 </body>
 </html>
