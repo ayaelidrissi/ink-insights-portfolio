@@ -6,7 +6,6 @@
     <title>Services | Ink & Insights</title>
     <meta name="description" content="Developmental, line & copy editing, proofreading and manuscript critique with transparent per-word pricing and payment plans. Get an instant quote.">
       <link rel="icon" type="image/png" href="../Logos/logo.png">
-    <meta name="description" content="Professional book editing services including developmental editing, line editing, copy editing, proofreading, formatting, and manuscript critique.">
     <link rel="stylesheet" href="../Css/styles.css">
     <link rel="stylesheet" href="../Css/pages-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -246,6 +245,92 @@
         .returning-client-label strong {
             color: var(--primary);
         }
+
+        /* ── MANUSCRIPT CRITIQUE ── */
+        .critique-hook {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            color: #2c2c2c;
+            line-height: 1.5;
+            margin-bottom: 6px;
+        }
+        .critique-hook strong {
+            color: var(--primary);
+        }
+        .critique-includes {
+            border-top: none;
+            padding-top: 0;
+            margin: 16px 0 20px;
+        }
+        .critique-not {
+            background: #fbeef0;
+            border-left: 3px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            color: #5a2029;
+            margin: 18px 0;
+            line-height: 1.5;
+        }
+        .critique-credit {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
+            margin-top: 16px;
+        }
+
+        /* ── CRITIQUE VS DEV EDIT COMPARISON ── */
+        .compare-block {
+            margin: 28px 0;
+        }
+        .compare-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c2c2c;
+            margin-bottom: 16px;
+        }
+        .compare-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 640px) {
+            .compare-grid { grid-template-columns: 1fr; }
+        }
+        .compare-card {
+            border: 1.5px solid #e4d5d6;
+            border-radius: 14px;
+            padding: 22px 20px;
+            background: #fcfdfc;
+        }
+        .compare-card:first-child {
+            background: #fbeef0;
+        }
+        .compare-tagline {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: var(--primary);
+            margin: 2px 0 12px;
+        }
+        .compare-card .bundle-includes {
+            border-top: 1px solid #e4d5d6;
+            padding-top: 12px;
+        }
+        .compare-card .bundle-includes li strong {
+            color: #2c2c2c;
+            font-weight: 600;
+        }
+        .compare-takeaway {
+            font-size: 0.92rem;
+            color: #666;
+            margin-top: 16px;
+            line-height: 1.55;
+        }
+        .compare-takeaway strong {
+            color: var(--primary);
+        }
     </style>
 
     <script type="application/ld+json">
@@ -350,6 +435,25 @@
           "description": "$0.013 per word — save 19%"
         }
       }
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "item": {
+        "@type": "Service",
+        "name": "Manuscript Critique",
+        "description": "A full read of your manuscript with a 10–15 page editorial letter, a prioritized revision roadmap, and an optional follow-up call. Ideal before querying agents or self-publishing.",
+        "provider": {
+          "@type": "Person",
+          "name": "Avery Jensen"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "250",
+          "priceCurrency": "USD",
+          "description": "From $250 for manuscripts up to 50,000 words"
+        }
+      }
     }
   ]
 }
@@ -366,6 +470,14 @@
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "I edit the first 1,000 words of your manuscript for free with no strings attached. This gives you a real taste of my editing style and lets us see if we are a great fit before you commit to anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a manuscript critique?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A manuscript critique is a full read of your book followed by a detailed editorial letter covering plot, characters, pacing, and your opening chapters, plus a prioritized revision roadmap. It looks at the big picture before any sentence-level editing, which makes it ideal before querying agents or investing in a full edit. Prices start at $250."
       }
     },
     {
@@ -620,12 +732,52 @@
 
                     <div id="manuscript-critique" class="sub-service-box">
                         <h3>Manuscript Critique</h3>
-                        <p>Think of this as a "Report Card" for your book. I provide a detailed letter with color-coded notes highlighting your book's strengths and areas for improvement without a full line edit.</p>
-                        <ul class="price-list">
-                            <li>Up to 50,000 words <span>$100</span></li>
-                            <li>50,000–80,000 words <span>$150</span></li>
-                            <li>80,000–100,000 words <span>$200</span></li>
+                        <p>I read the entire manuscript, cover to cover. I give you a frank letter detailing what is working well and what needs work. Nothing sweetened and nothing brutal.</p>
+                        <p><strong>Get this before you query agents.</strong> Agents politely say no without telling you why. I will tell you why, long before they even get their hands on it. This is also the proper thing to do if you are planning on self-publishing. Or if you've read your book so many times the words have stopped making sense. I get that feeling.</p>
+                        <p>I focus on the big picture stuff. Is there a solid story? Are the characters believable? Where are the weak spots in the pacing? Are the opening chapters up to snuff to withstand an agent's Monday morning inbox?</p>
+                        <ul class="bundle-includes critique-includes">
+                            <li>A 10–15 page editorial letter, color-coded for your convenience</li>
+                            <li>A single page revision list, in order — do this first, then this</li>
+                            <li>Provided in 2–3 weeks</li>
                         </ul>
+                        <p class="critique-not"><strong>One thing this isn't:</strong> I won't fix typos or rewrite sentences here. That comes later — no point polishing a chapter you might cut.</p>
+
+                        <div class="compare-block">
+                            <p class="compare-title">Critique or developmental edit? Here's the difference.</p>
+                            <div class="compare-grid">
+                                <div class="compare-card">
+                                    <span class="bundle-tag">Manuscript Critique</span>
+                                    <p class="compare-tagline">The diagnosis.</p>
+                                    <ul class="bundle-includes">
+                                        <li><strong>My job:</strong> read your entire book, then take a step back and evaluate your entire manuscript</li>
+                                        <li><strong>What you get:</strong> 1 editorial letter + a revision outline</li>
+                                        <li><strong>End result:</strong> you will know precisely what needs to be revised — and you will do it</li>
+                                        <li><strong>Ideal when:</strong> you have completed an early draft, or are preparing to query</li>
+                                        <li><strong>Investment:</strong> from $250 flat</li>
+                                    </ul>
+                                </div>
+                                <div class="compare-card">
+                                    <span class="bundle-tag">Developmental Edit</span>
+                                    <p class="compare-tagline">The treatment.</p>
+                                    <ul class="bundle-includes">
+                                        <li><strong>My job:</strong> go through your manuscript with you chapter-by-chapter</li>
+                                        <li><strong>What you get:</strong> comments within the margins of every scene, as well as the editorial letter</li>
+                                        <li><strong>End result:</strong> you will see <em>how</em> and <em>where</em> to make the necessary changes</li>
+                                        <li><strong>Ideal when:</strong> you are ready to begin revising and need someone to guide you through the process</li>
+                                        <li><strong>Investment:</strong> $0.009/word</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="compare-takeaway">In short: the critique tells you <strong>what</strong> to fix. The developmental edit shows you <strong>how</strong>, page by page. Many authors start with a critique — and remember, the fee counts toward your edit.</p>
+                        </div>
+
+                        <ul class="price-list">
+                            <li>Up to 50,000 words <span>$250</span></li>
+                            <li>50,000–80,000 words <span>$350</span></li>
+                            <li>80,000–100,000 words <span>$450</span></li>
+                            <li>Over 100,000 words <span>+$50 per 20,000 words</span></li>
+                        </ul>
+                        <p class="critique-credit">💜 Book a developmental edit within 60 days and your full critique fee goes toward it.</p>
                     </div>
 
                     <div id="poetry" class="sub-service-box">
@@ -711,7 +863,6 @@
         </div>
     </div>
 </footer>
-    </footer>
 
     <script src="../script.js"></script>
     <script defer src="/_vercel/insights/script.js"></script>
